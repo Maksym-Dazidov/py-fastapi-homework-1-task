@@ -20,6 +20,7 @@ class MovieDetailResponseSchema(BaseModel):
         "from_attributes": True
     }
 
+
 class MovieListResponseSchema(BaseModel):
     movies: List[MovieDetailResponseSchema]
     total_items: int
