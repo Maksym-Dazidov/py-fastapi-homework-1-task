@@ -1,3 +1,5 @@
+import datetime
+
 from pydantic import BaseModel
 
 
@@ -8,7 +10,7 @@ class MovieDetailResponseSchema(BaseModel):
     score: float
     genre: str
     overview: str
-    crew: List[str]
+    crew: list[str]
     orig_title: str
     status: str
     orig_lang: str
@@ -22,7 +24,7 @@ class MovieDetailResponseSchema(BaseModel):
 
 
 class MovieListResponseSchema(BaseModel):
-    movies: List[MovieDetailResponseSchema]
+    movies: list[MovieDetailResponseSchema]
     total_items: int
     total_pages: int
     prev_page: str | None
